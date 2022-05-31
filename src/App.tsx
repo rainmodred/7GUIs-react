@@ -3,6 +3,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Counter from './components/Counter/Counter';
 import FlightBooker from './components/FlightBooker/FlightBooker';
 import TemperatureConverter from './components/TemperatureConverter/TemperatureConverter';
+import Timer from './components/Timer/Timer';
 
 type Route = {
   title: string;
@@ -21,6 +22,10 @@ const routes: Route[] = [
   {
     title: 'Flight Booker',
     path: '/flight-booker',
+  },
+  {
+    title: 'Timer',
+    path: '/Timer',
   },
 ];
 
@@ -41,6 +46,8 @@ function App() {
           element={<TemperatureConverter />}
         />
         <Route path="/flight-booker/" element={<FlightBooker />} />
+
+        <Route path="/Timer" element={<Timer />} />
       </Routes>
     </div>
   );
