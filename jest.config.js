@@ -15,4 +15,7 @@ module.exports = {
       statements: 100,
     },
   },
+  transform: {
+    '.+\\.(css|styl|less|sass|scss)$': 'jest-css-modules-transform',
+  },
 };
