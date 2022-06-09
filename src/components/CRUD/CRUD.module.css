@@ -1,0 +1,14 @@
+.wrapper {
+  max-width: 500px;
+  padding: 12px;
+}
+
+.formWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.formWrapper select {
+  min-width: ;
+}
