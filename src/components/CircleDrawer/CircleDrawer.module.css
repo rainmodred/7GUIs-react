@@ -1,0 +1,19 @@
+.canvas {
+  position: relative;
+  border: 2px solid green;
+  z-index: 1;
+}
+
+.contextMenu {
+  display: none;
+  position: absolute;
+  border: 2px solid black;
+  padding: 6px;
+  z-index: 2;
+  background-color: white;
+}
+
+.contextMenuOpen {
+  display: flex;
+  flex-direction: column;
+}
