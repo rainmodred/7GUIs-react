@@ -6,6 +6,7 @@ import FlightBooker from './components/FlightBooker/FlightBooker';
 import TemperatureConverter from './components/TemperatureConverter/TemperatureConverter';
 import Timer from './components/Timer/Timer';
 import CircleDrawer from './components/CircleDrawer/CircleDrawer';
+import Cells from './components/Cells/Cells';
 
 type Route = {
   title: string;
@@ -34,6 +35,7 @@ const routes: Route[] = [
     path: '/CRUD',
   },
   { title: 'Circle Drawer', path: '/Circle-Drawer' },
+  { title: 'Cells', path: '/Cells' },
 ];
 
 function App() {
@@ -56,6 +58,7 @@ function App() {
         <Route path="/Timer" element={<Timer />} />
         <Route path="/CRUD" element={<CRUD />} />
         <Route path="/Circle-Drawer" element={<CircleDrawer />} />
+        <Route path="/Cells" element={<Cells />} />
       </Routes>
     </div>
   );
