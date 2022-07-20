@@ -50,7 +50,6 @@ export default function Cells() {
 
     if (res) {
       const { fn, numbers, cellKeys } = res;
-
       const cellValues = [];
       if (cellKeys.length > 0) {
         for (const cellKey of cellKeys) {

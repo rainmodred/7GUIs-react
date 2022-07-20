@@ -59,5 +59,20 @@ describe('Cells', () => {
 
       expect(cell).toHaveValue('error');
     });
+
+    it('should return add values of 2 celss', async () => {
+      render(<Cells />);
+      const user = userEvent.setup();
+      const formula = '=add(A0,B0)';
+
+      await user.type(screen.getByTestId('A0'), '1');
+      await user.type(screen.getByTestId('B0'), '2');
+
+      const cell = screen.getByTestId('C0');
+      await user.type(cell, formula);
+      fireEvent.blur(cell);
+
+      expect(cell).toHaveValue('3');
+    });
   });
 });
