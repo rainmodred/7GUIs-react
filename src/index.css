@@ -45,3 +45,31 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
+
+/* TABLE */
+
+table {
+  table-layout: fixed;
+  border: 1px solid #b6b6b6;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  height: 500px;
+  display: block;
+  overflow: scroll;
+}
+
+tbody,
+th,
+tr,
+td {
+  border: 1px solid #b6b6b6;
+}
+
+th,
+td {
+}
+
+td > * {
+  width: 120px;
+}
