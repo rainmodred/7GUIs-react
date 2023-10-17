@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
+import styles from './Cell.module.css';
+
 interface CellProps {
   id: string;
   value: string;
@@ -56,6 +58,7 @@ export default function Cell({
   return (
     <td>
       <input
+        className={styles.cell}
         data-testid={id}
         value={currentValue}
         onChange={handleChange}
