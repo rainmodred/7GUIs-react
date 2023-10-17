@@ -6,7 +6,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "test": "jest --watch --verbose"
+    "test": "jest --watch --verbose",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "lodash.debounce": "^4.0.8",
@@ -28,6 +30,7 @@
     "eslint": "^8.15.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-react": "^7.29.4",
+    "gh-pages": "^6.0.0",
     "jest": "^28.1.0",
     "jest-css-modules-transform": "^4.4.2",
     "jest-environment-jsdom": "^28.1.0",
