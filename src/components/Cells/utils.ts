@@ -5,13 +5,13 @@ const ROWS = Array.from({ length: 100 }, (_, index) => index);
 const formulasList: { [key: string]: (...args: number[]) => number } = {
   sum: (...args) => args.reduce((prev, curr) => prev + curr, 0),
   add: (x = 0, y = 0) => x + y,
+  //TODO
 };
 
 function toKey(row: number, col: number) {
   return `${COLLUMNS[col]}${row}`;
 }
 
-//TODO: refactor
 function validateFormula(formula: string) {
   if (!formula) {
     return null;

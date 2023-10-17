@@ -150,7 +150,6 @@ function reducer(state: typeof initialState, action: ACTIONTYPE) {
   }
 }
 
-//TODO: use USEREDUCER
 export default function CircleDrawer(): JSX.Element {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [currentDiameter, setCurrentDiameter] = useState(DEFAULT_DIAMETER);
