@@ -20,10 +20,13 @@ export default function CRUD() {
     setName('');
     setSurname('');
   }
+
   function handleCreate(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setUsers([...users, createUser(name, surname)]);
-    resetInputs();
+    if (name.length > 0 && surname.length > 0) {
+      setUsers([...users, createUser(name, surname)]);
+      resetInputs();
+    }
   }
 
   function handleUpdate() {
@@ -64,13 +67,16 @@ export default function CRUD() {
           <div>
             <label>
               Name:
-              <input onChange={e => setName(e.target.value)} value={name} />
+              <input
+                onChange={e => setName(e.target.value.trim())}
+                value={name}
+              />
             </label>
 
             <label>
               Surname:
               <input
-                onChange={e => setSurname(e.target.value)}
+                onChange={e => setSurname(e.target.value.trim())}
                 value={surname}
               />
             </label>

@@ -46,6 +46,14 @@ describe('CRUD', () => {
     ).toBeInTheDocument();
   });
 
+  it('should not create new user with empty fields', async () => {
+    render(<CRUD />);
+    const user = userEvent.setup();
+    await user.click(screen.getByRole('button', { name: /create/i }));
+
+    expect(screen.queryAllByRole('option')).toHaveLength(0);
+  });
+
   it('should update selected user', async () => {
     render(<CRUD />);
     const user = userEvent.setup();
