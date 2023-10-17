@@ -25,7 +25,7 @@ export default function TemperatureConverter() {
 
   return (
     <div>
-      <div>Temperature Converter</div>
+      <h3>Temperature Converter</h3>
       <div>
         <input
           name="celcius"

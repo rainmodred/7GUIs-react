@@ -1,5 +1,4 @@
-import userEvent from '@testing-library/user-event';
-import { render, screen, fireEvent } from '../../test/test-utils';
+import { render, screen } from '../../test/test-utils';
 import CircleDrawer from './CircleDrawer';
 
 describe('Circle Drawer', () => {

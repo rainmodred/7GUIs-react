@@ -1,0 +1,9 @@
+.App {
+  height: 100%;
+  padding: 1rem;
+}
+
+ol {
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}

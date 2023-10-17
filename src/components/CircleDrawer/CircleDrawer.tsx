@@ -10,8 +10,6 @@ import {
 import debounce from 'lodash.debounce';
 import styles from './CircleDrawer.module.css';
 
-//Performance not found
-
 const DEFAULT_DIAMETER = 24;
 interface Circle {
   x: number;
@@ -182,6 +180,7 @@ export default function CircleDrawer(): JSX.Element {
   useLayoutEffect(() => {
     const canvas = canvasRef.current;
     canvasRef.current!.width = canvasWrapperRef!.current!.clientWidth;
+    canvasRef.current!.height = canvasWrapperRef!.current!.clientHeight;
 
     const context = canvas!.getContext('2d');
     contextRef.current = context;
@@ -269,6 +268,7 @@ export default function CircleDrawer(): JSX.Element {
     setCurrentDiameter(value);
     debouncedDiameterChange(value);
   }
+  console.log(debounce);
 
   const debouncedDiameterChange = useCallback(
     debounce((value: number) => {

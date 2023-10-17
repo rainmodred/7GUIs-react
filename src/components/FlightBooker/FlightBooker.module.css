@@ -1,7 +1,13 @@
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  max-width: 30rem;
-  border: 1px solid black;
-  padding: 0.5rem;
+  max-width: 15rem;
+}
+
+.controls {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.controls select {
+  grid-column: 2;
 }

@@ -61,6 +61,7 @@ export default function Timer() {
             setDuration(e.target.value)
           }
         />
+        {formatTime(Number(duration))}
       </label>
       <button className={styles.button} onClick={handleReset}>
         Reset timer

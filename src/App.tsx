@@ -8,6 +8,8 @@ import Timer from './components/Timer/Timer';
 import CircleDrawer from './components/CircleDrawer/CircleDrawer';
 import Cells from './components/Cells/Cells';
 
+import styles from './App.module.css';
+
 type Route = {
   title: string;
   path: string;
@@ -40,7 +42,15 @@ const routes: Route[] = [
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.App}>
+      <a
+        href="https://eugenkiss.github.io/7guis/tasks/#cells"
+        target="_blank"
+        rel="noreferrer"
+      >
+        about 7GUIs
+      </a>
+      <h3>Tasks:</h3>
       <ol>
         {routes.map(({ title, path }, index) => (
           <li key={index}>

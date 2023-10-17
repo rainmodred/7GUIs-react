@@ -82,7 +82,7 @@ export default function CRUD() {
             </label>
           </div>
         </div>
-        <div>
+        <div className={styles.controls}>
           <button type="submit">create</button>
           <button type="button" onClick={handleUpdate}>
             update

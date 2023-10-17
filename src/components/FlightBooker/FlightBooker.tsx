@@ -37,31 +37,35 @@ export default function FlightBooker() {
 
   return (
     <div className={styles.wrapper}>
-      <div>Flight Booker</div>
-      <select value={selectedValue} onChange={handleChange}>
-        {options.map(({ name, value }) => (
-          <option key={value} value={value}>
-            {name}
-          </option>
-        ))}
-      </select>
-      <label htmlFor="departure date">Departure Date</label>
-      <input
-        name="departure date"
-        id="departure date"
-        type="date"
-        value={departureDate}
-        onChange={handleDepartureDateChange}
-      />
-      <label htmlFor="return date">Return Date</label>
-      <input
-        disabled={isReturnDateDisabled}
-        name="return date"
-        id="return date"
-        type="date"
-        value={returnDate}
-        onChange={handleReturnDateChange}
-      />
+      <h3>Flight Booker</h3>
+      <div className={styles.controls}>
+        <select value={selectedValue} onChange={handleChange}>
+          {options.map(({ name, value }) => (
+            <option key={value} value={value}>
+              {name}
+            </option>
+          ))}
+        </select>
+
+        <label htmlFor="departure date">Departure date:</label>
+        <input
+          name="departure date"
+          id="departure date"
+          type="date"
+          value={departureDate}
+          onChange={handleDepartureDateChange}
+        />
+
+        <label htmlFor="return date">Return date:</label>
+        <input
+          disabled={isReturnDateDisabled}
+          name="return date"
+          id="return date"
+          type="date"
+          value={returnDate}
+          onChange={handleReturnDateChange}
+        />
+      </div>
 
       <button onClick={handleBook} disabled={isBookDisabled}>
         Book

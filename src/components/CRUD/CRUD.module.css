@@ -7,8 +7,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  margin: 0.5rem 0;
 }
 
 .formWrapper select {
   min-width: ;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
 }

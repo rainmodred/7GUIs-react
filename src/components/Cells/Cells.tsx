@@ -90,7 +90,8 @@ export default function Cells() {
 
   return (
     <div>
-      <h2>Cells</h2>
+      <h3>Cells</h3>
+      <span>=sum(A0:C0)</span>
       <table className={styles.table}>
         <tbody>
           <tr className={styles.header}>
